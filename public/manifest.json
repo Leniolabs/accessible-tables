@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "GPT3 Accessible Tables",
+  "short_name": "GPT3 Accessible Tables",
+  "description": "",
+  "version": "0.0.4",
+  "icons": {
+    "16": "favicon.ico",
+    "48": "logo192.png",
+    "128": "logo512.png"
+  },
+  "author": "Leniolabs LLC_",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "GPT3 Accessible Tables"
+  },
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["*://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "service-worker.iife.js"
+  }
+}

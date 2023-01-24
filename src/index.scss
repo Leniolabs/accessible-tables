@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap");
+
+:root {
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #1a1a25;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  border-radius: 8px;
+  min-width: 400px;
+  max-width: 400px;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 14px 16px;
+  border: 1px solid #bcbcc680;
+  display: flex;
+
+  .header-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin: auto 0;
+    margin-right: auto;
+  }
+}
+
+.section {
+  padding: 12px 16px;
+
+  .section-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .section-content {
+    margin: 16px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    &.flex {
+      display: flex;
+      place-content: space-around;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.section-content-right {
+      place-content: end;
+    }
+  }
+
+  & + .section {
+    border-top: 1px solid #bcbcc680;
+  }
+}
+
+.indicator {
+  text-align: center;
+  .indicator-value {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .indicator-label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.toggle-container {
+  width: 100%;
+  display: flex;
+
+  .toggle-label {
+    margin: auto 0;
+    margin-left: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .toggle {
+    margin: auto 0;
+    width: 48px;
+    height: 24px;
+    background-color: #1a1a25;
+    border-radius: 18px;
+    display: flex;
+
+    transition: background-color 0.25s ease-in-out;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .toggle-handle {
+      width: 20px;
+      height: 20px;
+      margin: auto 2px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    &.toggled {
+      background-color: #fecb2f;
+
+      .toggle-handle {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .input-label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    width: 100%;
+    display: flex;
+  }
+
+  input {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #001514;
+    color: #001514;
+    width: 100%;
+  }
+
+  .input {
+    &-required {
+      border: 2px solid #fc462f;
+    }
+  }
+}
+
+a {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 20px;
+  color: #0e67ed;
+  text-decoration: underline;
+  margin-left: auto;
+}
+
+.button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  cursor: pointer;
+
+  color: #ffffff;
+  background: #001514;
+  border-radius: 8px;
+  padding: 5px 10px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.button-big {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 20px;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+}
+
+span {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  + span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    line-break: anywhere;
+  }
+}
+
+.button-icon {
+  width: 20px;
+  height: max-content;
+  display: flex;
+  margin-left: 8px;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
